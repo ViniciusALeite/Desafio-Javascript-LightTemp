@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+
+    --ff-text: 'Roboto', sans-serif;
+    --fc-text: hsla(240, 6%, 21%, 1);
+
+    --ic-color: hsla(0, 0%, 100%, 1);
+
+    --bg-button: hsla(240, 9%, 89%, 1);
+    --bg-body: hsla(0, 0%, 100%, 1);
+    --bg-buttonOn: hsla(194, 97%, 31%, 1);
+}
+body {
+    background: var(--bg-body);
+    font-family: var(--ff-text);
+    display: grid;
+    place-content: center;
+    margin-top: 25rem;
+}
+.main-content {
+    display: flex;
+}
+.timer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 19.2rem;
+}
+.timer {
+    margin-bottom: 1.7rem;
+}
+span {
+    font-size: 12.6rem;
+}
+.controls {
+   display: flex;
+   gap: 3.2rem;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "A B"
+    "C D";
+    gap: 3.2rem;
+}
+button,
+.cards {
+    border: none;
+    background-color: transparent;
+    
+    cursor: pointer;
+}
+.button-cards {
+    width: 13.8rem;
+    height: 15.2rem;
+
+    background-color: var(--bg-button);
+    border-radius: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rain {
+    background-color: var(--bg-buttonOn);
+}
+
+
