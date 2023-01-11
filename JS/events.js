@@ -34,19 +34,22 @@ export default function({controls, timer, sound}) {
 
     forestButton.addEventListener('click', function() {
         sound.forest()
-        
+        forestButton.style.backgroundColor = 'lightgreen'
     })
 
     rainButton.addEventListener('click', function() {
         sound.rain()
+        rainButton.style.backgroundColor = 'lightgreen'
     })
 
     coffeeButton.addEventListener('click', function() {
         sound.cofeeShop()
+        coffeeButton.style.backgroundColor = 'lightgreen'
     })
 
     fireplaceButton.addEventListener('click', function() {
         sound.fireplace()
+        fireplaceButton.style.backgroundColor = 'lightgreen'
     })
 
 

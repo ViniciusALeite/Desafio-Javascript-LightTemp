@@ -18,7 +18,9 @@ export default function Controls({playButton, stopButton, minutesDisplay}) {
     return timer.updateMinutes(Number(minutesDisplay.textContent), -5)   
   }
 
- 
+  function switchBackgorund() {
+    
+  }
 
   return {
     play,
