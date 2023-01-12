@@ -68,9 +68,14 @@ button,
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .rain {
     background-color: var(--bg-buttonOn);
 }
+/* 
+.cards button path {
+    fill: red;
+} */
 
 

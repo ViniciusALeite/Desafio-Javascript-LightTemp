@@ -10,11 +10,7 @@ import {
     minutesDisplay,
     secondsDisplay,
     minutesDisplay,
-    secondsDisplay,
-    // forestButton,
-    // rainButton,
-    // coffeeButton,
-    // fireplaceButton
+    secondsDisplay,   
 } from "./elements.js";
 
 const controls = Controls({

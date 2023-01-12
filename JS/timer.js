@@ -31,14 +31,14 @@ export default function Timer({
   
       updateDisplay(minutes, 0)
   
-      if (end) {
+      if(end) {
         resetControls()
         updateDisplay()
         Sounds().timeEnd()
         return
       }
   
-      if( seconds <= 0 ) {
+      if(seconds <= 0) {
         seconds = 60
         --minutes
       }
