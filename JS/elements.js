@@ -31,4 +31,4 @@ export {
     rainIcon,
     coffeeShopIcon,
     fireplaceIcon
-}
+};

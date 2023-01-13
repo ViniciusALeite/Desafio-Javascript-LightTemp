@@ -1,27 +1,22 @@
-export default function Controls({playButton, stopButton, minutesDisplay}) {
-  
+  import { playButton, stopButton, minutesDisplay } from "./elements";
+  import { updateMinutes } from "./timer";
+
   function play() {
     playButton.classList.add('hide')      
     stopButton.classList.remove('hide')
   }
   
-  function reset() {
+  function resetButtons() {
     playButton.classList.remove('hide')
     stopButton.classList.add('hide')
   }
 
   function moreMinutes() {
-    return timer.updateMinutes(Number(minutesDisplay.textContent), 5)   
+    return updateMinutes(Number(minutesDisplay.textContent), 5)   
   }
 
   function lessMinutes() {
-    return timer.updateMinutes(Number(minutesDisplay.textContent), -5)   
+    return updateMinutes(Number(minutesDisplay.textContent), -5)   
   }
 
-  return {
-    play,
-    reset,
-    moreMinutes,
-    lessMinutes
-  }
-}
+  export {play, resetControls, moreMinutes, lessMinutes};

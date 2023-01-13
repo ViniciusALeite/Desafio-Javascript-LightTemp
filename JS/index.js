@@ -1,7 +1,7 @@
 import Controls from "./controls.js";
 import Timer from "./timer.js";
-import Events from "./events.js";
 import Sound from "./sounds.js";
+import Events from "./events.js";
 import {
     playButton,
     stopButton,
