@@ -1,5 +1,5 @@
-  import { playButton, stopButton, minutesDisplay } from "./elements";
-  import { updateMinutes } from "./timer";
+  import { playButton, stopButton, minutesDisplay } from "./elements.js";
+  import { updateMinutes } from "./timer.js";
 
   function play() {
     playButton.classList.add('hide')      
@@ -19,4 +19,4 @@
     return updateMinutes(Number(minutesDisplay.textContent), -5)   
   }
 
-  export {play, resetControls, moreMinutes, lessMinutes};
+  export {play, resetButtons, moreMinutes, lessMinutes};

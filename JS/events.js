@@ -6,11 +6,7 @@ import {
     forestButton,
     rainButton,
     coffeeButton,
-    fireplaceButton,
-    forestIcon,
-    rainIcon,
-    coffeeShopIcon,
-    fireplaceIcon
+    fireplaceButton,    
 } from "./elements.js";
 import { play, resetButtons } from "./controls.js";
 import { countdown } from "./timer.js";
@@ -41,55 +37,28 @@ lessButton.addEventListener('click', function() {
 forestButton.addEventListener('click', function() {
     forest()
     buttonClick()
-    forestButton.style.backgroundColor = "#02799d";
-    rainButton.style.backgroundColor = "#E1E1E6";
-    fireplaceIcon.style.backgroundColor = "#E1E1E6";
-    coffeeButton.style.backgroundColor = "#E1E1E6";
-
-    forestIcon.style.fill = "#FFFFFF";
-    rainIcon.style.fill = "#323238";
-    coffeeShopIcon.style.fill = "#323238";
-    fireplaceIcon.style.fill = "#323238";        
+    $('.fundo-colorido').removeClass('fundo-colorido');
+    $('.forest').addClass('fundo-colorido');          
 });
 
 rainButton.addEventListener('click', function() {
     rain()
     buttonClick()
-    rainButton.style.backgroundColor = "#02799d";
-    forestButton.style.backgroundColor = "#E1E1E6";
-    fireplaceIcon.style.backgroundColor = "#E1E1E6";
-    coffeeButton.style.backgroundColor = "#E1E1E6";
-
-    rainIcon.style.fill = "#FFFFFF";
-    forestIcon.style.fill = "#323238";
-    coffeeShopIcon.style.fill = "#323238";
-    fireplaceIcon.style.fill = "#323238";        
+    $('.fundo-colorido').removeClass('fundo-colorido');
+    $('.rain').addClass('fundo-colorido');
+      
 });
 
 coffeeButton.addEventListener('click', function() {
     cofeeShop()
     buttonClick()
-    coffeeButton.style.backgroundColor = "#02799d";
-    forestButton.style.backgroundColor = "#E1E1E6";
-    rainButton.style.backgroundColor = "#E1E1E6";
-    coffeeButton.style.backgroundColor = "#E1E1E6";
-
-    coffeeShopIcon.style.fill = "#FFFFFF";
-    forestIcon.style.fill = "#323238";
-    rainIcon.style.fill = "#323238";
-    fireplaceIcon.style.fill = "#323238";
+    $('.fundo-colorido').removeClass('fundo-colorido');
+    $('.coffeeShop').addClass('fundo-colorido');    
 });
 
 fireplaceButton.addEventListener('click', function() {
     fireplace()
     buttonClick()
-    fireplaceButton.style.backgroundColor = "#02799d";
-    forestButton.style.backgroundColor = "#E1E1E6";
-    rainButton.style.backgroundColor = "#E1E1E6";
-    coffeeButton.style.backgroundColor = "#E1E1E6";
-
-    forestIcon.style.fill = "#FFFFFF";
-    rainIcon.style.fill = "#323238";
-    coffeeShopIcon.style.fill = "#323238";
-    fireplaceIcon.style.fill = "#323238";
+    $('.fundo-colorido').removeClass('fundo-colorido');
+    $('.fireplace').addClass('fundo-colorido');   
 });

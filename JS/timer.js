@@ -1,4 +1,4 @@
-import Sounds from "./sounds.js";
+import { timeEnd } from "./sounds.js";
 import { minutesDisplay, secondsDisplay  } from "./elements.js";
 
 let timerTimeOut
@@ -26,9 +26,9 @@ function countdown(){
     updateDisplay(minutes, 0)
 
     if(end) {
-      resetControls()
+      resetButtons()
       updateDisplay()
-      Sounds().timeEnd()
+      timeEnd()
       return
     }
 

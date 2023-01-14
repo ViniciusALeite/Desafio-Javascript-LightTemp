@@ -70,12 +70,17 @@ button,
     justify-content: center;
     
 }
-.rain {
+/* .rain {
     background-color: var(--bg-buttonOn);
-}
-/* 
-.cards button path {
-    fill: red;
 } */
 
+/* .cards .rain path {
+    fill: #323238;
+} */
 
+.fundo-colorido {
+     background-color: #02799d;
+}
+.fundo-colorido svg path {
+    fill: #FFFFFF;
+}

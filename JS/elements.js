@@ -8,10 +8,10 @@ const rainButton = document.querySelector('.rain');
 const coffeeButton = document.querySelector('.coffeeShop');
 const fireplaceButton = document.querySelector('.fireplace');
 
-const forestIcon = document.querySelector('.cards button forest svg path');
-const rainIcon = document.querySelector('.cards button rain svg path');
-const coffeeShopIcon = document.querySelector('.cards button coffeeShop svg path');
-const fireplaceIcon = document.querySelector('.cards button fireplace svg path');
+const forestIcon = document.querySelector('.forest svg path');
+const rainIcon = document.querySelector('.rain svg path');
+const coffeeShopIcon = document.querySelector('.coffeeShop svg path');
+const fireplaceIcon = document.querySelector('.fireplace svg path');
 
 const minutesDisplay = document.querySelector('.minutes');
 const secondsDisplay = document.querySelector('.seconds');
