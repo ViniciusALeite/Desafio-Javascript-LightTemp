@@ -19,7 +19,7 @@ body {
     background: var(--bg-body);
     font-family: var(--ff-text);
     display: grid;
-    place-content: center;
+    place-items: center;
     margin-top: 25rem;
 }
 .main-content {
@@ -42,6 +42,9 @@ span {
 .controls {
    display: flex;
    gap: 3.2rem;
+}
+.hide {
+    display: none;
 }
 .cards {
     display: grid;
@@ -78,9 +81,9 @@ button,
     fill: #323238;
 } */
 
-.fundo-colorido {
+.switchColor {
      background-color: #02799d;
 }
-.fundo-colorido svg path {
+.switchColor svg path {
     fill: #FFFFFF;
 }

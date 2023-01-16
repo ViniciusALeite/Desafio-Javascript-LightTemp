@@ -6,59 +6,44 @@ import {
     forestButton,
     rainButton,
     coffeeButton,
-    fireplaceButton,    
+    fireplaceButton,
 } from "./elements.js";
-import { play, resetButtons } from "./controls.js";
-import { countdown } from "./timer.js";
+import { lessFiveMinutes, moreFiveMinutes, play, resetButtons } from "./controls.js";
 import { buttonClick, forest, rain, cofeeShop, fireplace } from "./sounds.js";
 
-playButton.addEventListener('click', function() {
-    play()
-    countdown()
-    buttonClick()
-});
+playButton.addEventListener('click', play);
 
-stopButton.addEventListener('click', function() {
-    reset()
-    resetButtons()
-    buttonClick()
-});
+stopButton.addEventListener('click', resetButtons);
 
-moreButton.addEventListener('click', function() {
-    moreMinutes()  
-    buttonClick()
-});    
+moreButton.addEventListener('click', moreFiveMinutes);
 
-lessButton.addEventListener('click', function() {
-    lessMinutes()
-    buttonClick()
-});
+lessButton.addEventListener('click', lessFiveMinutes);
 
 forestButton.addEventListener('click', function() {
     forest()
     buttonClick()
-    $('.fundo-colorido').removeClass('fundo-colorido');
-    $('.forest').addClass('fundo-colorido');          
+    $('.switchColor').removeClass('switchColor');
+    $('.forest').addClass('switchColor');          
 });
 
 rainButton.addEventListener('click', function() {
     rain()
     buttonClick()
-    $('.fundo-colorido').removeClass('fundo-colorido');
-    $('.rain').addClass('fundo-colorido');
+    $('.switchColor').removeClass('switchColor');
+    $('.rain').addClass('switchColor');  
       
 });
 
 coffeeButton.addEventListener('click', function() {
     cofeeShop()
     buttonClick()
-    $('.fundo-colorido').removeClass('fundo-colorido');
-    $('.coffeeShop').addClass('fundo-colorido');    
+    $('.switchColor').removeClass('switchColor');
+    $('.coffeeShop').addClass('switchColor');     
 });
 
 fireplaceButton.addEventListener('click', function() {
     fireplace()
     buttonClick()
-    $('.fundo-colorido').removeClass('fundo-colorido');
-    $('.fireplace').addClass('fundo-colorido');   
+    $('.switchColor').removeClass('switchColor');
+    $('.fireplace').addClass('switchColor');   
 });

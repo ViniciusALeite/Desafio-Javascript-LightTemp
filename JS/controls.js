@@ -1,22 +1,31 @@
-  import { playButton, stopButton, minutesDisplay } from "./elements.js";
-  import { updateMinutes } from "./timer.js";
+  import { lessMinutes, reset, addMinutes } from "./timer.js";
+  import { countdown } from "./timer.js";
+  import { buttonClick } from "./sounds.js";
 
-  function play() {
-    playButton.classList.add('hide')      
-    stopButton.classList.remove('hide')
-  }
+   let status = false;
   
+  function play() {
+    if(status) return;  
+
+    countdown()
+    buttonClick()
+    status = true;
+  }
+
   function resetButtons() {
-    playButton.classList.remove('hide')
-    stopButton.classList.add('hide')
+    reset()
+    buttonClick()
+    status = false;
   }
 
-  function moreMinutes() {
-    return updateMinutes(Number(minutesDisplay.textContent), 5)   
+  function moreFiveMinutes() {
+    buttonClick()
+    addMinutes()
   }
 
-  function lessMinutes() {
-    return updateMinutes(Number(minutesDisplay.textContent), -5)   
+  function lessFiveMinutes() {
+    buttonClick()
+    lessMinutes()
   }
 
-  export {play, resetButtons, moreMinutes, lessMinutes};
+  export {play, resetButtons, moreFiveMinutes, lessFiveMinutes};

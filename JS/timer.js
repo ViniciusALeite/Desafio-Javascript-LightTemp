@@ -26,9 +26,8 @@ function countdown(){
     updateDisplay(minutes, 0)
 
     if(end) {
-      resetButtons()
-      updateDisplay()
       timeEnd()
+      updateDisplay()
       return
     }
 
@@ -44,13 +43,20 @@ function countdown(){
 
 
   function updateMinutes(newMinutes) {
-    minutes = newMinutes
+    minutesDisplay.textContent = String(Number(minutesDisplay.textContent) + newMinutes).padStart(2, '0');
+    minutes = minutesDisplay.textContent
   };
-      
-  const updateCurentTime = (current_time, minutes) => {
-    current_time += minutes;
-    return current_time;
-  };
-    
 
-export { updateDisplay, reset, countdown, updateMinutes, updateCurentTime };
+  function addMinutes(newMinutes) {
+    if(Number(minutesDisplay.textContent) == 60) return;
+
+    updateMinutes(5)
+  }
+
+  function lessMinutes(newMinutes) {
+    if(Number(minutesDisplay.textContent) == 0) return;
+
+    updateMinutes(-5)
+  }
+
+export { updateDisplay, reset, countdown, updateMinutes, addMinutes, lessMinutes };
