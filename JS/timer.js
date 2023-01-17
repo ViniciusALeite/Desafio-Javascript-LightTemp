@@ -8,13 +8,13 @@ function updateDisplay(newMinutes, seconds) {
 
   newMinutes = newMinutes === undefined ? minutes : newMinutes
   seconds = seconds === undefined ? 0 : seconds
-  minutesDisplay.textContent = String(newMinutes).padStart(2, "0")
-  secondsDisplay.textContent = String(seconds).padStart(2, "0")
+  minutesDisplay.textContent = String(newMinutes).padStart(2, "0");
+  secondsDisplay.textContent = String(seconds).padStart(2, "0");
 };
   
 function reset() {
-  updateDisplay(minutes, 0)
-  clearTimeout(timerTimeOut)
+  updateDisplay(minutes, 0);
+  clearTimeout(timerTimeOut);
 };
   
 function countdown(){
@@ -42,21 +42,21 @@ function countdown(){
   }, 1000)};
 
 
-  function updateMinutes(newMinutes) {
-    minutesDisplay.textContent = String(Number(minutesDisplay.textContent) + newMinutes).padStart(2, '0');
-    minutes = minutesDisplay.textContent
-  };
+function updateMinutes(newMinutes) {
+  minutesDisplay.textContent = String(Number(minutesDisplay.textContent) + newMinutes).padStart(2, '0');
+  minutes = minutesDisplay.textContent
+};
 
-  function addMinutes(newMinutes) {
-    if(Number(minutesDisplay.textContent) == 60) return;
+function addMinutes() {
+  if(Number(minutesDisplay.textContent) == 60) return;
 
-    updateMinutes(5)
-  }
+  updateMinutes(5)
+};
 
-  function lessMinutes(newMinutes) {
-    if(Number(minutesDisplay.textContent) == 0) return;
+function lessMinutes() {
+  if(Number(minutesDisplay.textContent) == 0) return;
 
-    updateMinutes(-5)
-  }
+  updateMinutes(-5)
+};
 
 export { updateDisplay, reset, countdown, updateMinutes, addMinutes, lessMinutes };

@@ -9,7 +9,7 @@ import {
     fireplaceButton,
 } from "./elements.js";
 import { lessFiveMinutes, moreFiveMinutes, play, resetButtons } from "./controls.js";
-import { buttonClick, forest, rain, cofeeShop, fireplace } from "./sounds.js";
+import { forest, rain, cofeeShop, fireplace } from "./sounds.js";
 
 playButton.addEventListener('click', play);
 
@@ -19,31 +19,10 @@ moreButton.addEventListener('click', moreFiveMinutes);
 
 lessButton.addEventListener('click', lessFiveMinutes);
 
-forestButton.addEventListener('click', function() {
-    forest()
-    buttonClick()
-    $('.switchColor').removeClass('switchColor');
-    $('.forest').addClass('switchColor');          
-});
+forestButton.addEventListener('click', forest);
 
-rainButton.addEventListener('click', function() {
-    rain()
-    buttonClick()
-    $('.switchColor').removeClass('switchColor');
-    $('.rain').addClass('switchColor');  
-      
-});
+rainButton.addEventListener('click', rain);
 
-coffeeButton.addEventListener('click', function() {
-    cofeeShop()
-    buttonClick()
-    $('.switchColor').removeClass('switchColor');
-    $('.coffeeShop').addClass('switchColor');     
-});
+coffeeButton.addEventListener('click', cofeeShop);
 
-fireplaceButton.addEventListener('click', function() {
-    fireplace()
-    buttonClick()
-    $('.switchColor').removeClass('switchColor');
-    $('.fireplace').addClass('switchColor');   
-});
+fireplaceButton.addEventListener('click', fireplace);
