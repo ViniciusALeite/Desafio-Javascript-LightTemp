@@ -43,9 +43,6 @@ span {
    display: flex;
    gap: 3.2rem;
 }
-.hide {
-    display: none;
-}
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -70,11 +67,10 @@ button,
     border-radius: 2.4rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 .switchColor {
-     background-color: #02799d;
+    background-color: #02799d;
 }
 .switchColor svg path {
     fill: #FFFFFF;
